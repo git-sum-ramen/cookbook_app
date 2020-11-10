@@ -5,4 +5,5 @@
   directions: @recipe.directions,
   prep_time: @recipe.image_url,
   image_url: @recipe.prep_time,
+  chef: @recipe.chef
 }

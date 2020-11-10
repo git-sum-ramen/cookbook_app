@@ -24,4 +24,20 @@ class Api::RecipesController < ApplicationController
 
     render 'show.json.jb'
   end
+
+  def update
+    # find recipe
+    @recipe = Recipe.last
+    # modify it
+    @recipe.chef = "johnny appleseed. necause he makes apples"
+    @recipe.ingredients = "sun + cold weather"
+    @recipe.directions = "wait until fall"
+    @recipe.prep_time = 150
+    @recipe.image_url = "mary-anne"
+    @recipe.title = "apples"
+    # save it
+    @recipe.save
+
+    render 'show.json.jb'
+  end
 end
