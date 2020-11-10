@@ -27,14 +27,14 @@ class Api::RecipesController < ApplicationController
 
   def update
     # find recipe
-    @recipe = Recipe.last
+    @recipe = Recipe.find_by(id: params[:id])
     # modify it
-    @recipe.chef = "johnny appleseed. necause he makes apples"
-    @recipe.ingredients = "sun + cold weather"
-    @recipe.directions = "wait until fall"
-    @recipe.prep_time = 150
-    @recipe.image_url = "mary-anne"
-    @recipe.title = "apples"
+    @recipe.chef = params[:chef]
+    @recipe.ingredients = params[:ingredients]
+    @recipe.directions = params[:directions]
+    @recipe.prep_time = params[:prep_time]
+    @recipe.image_url = params[:image_url]
+    @recipe.title = params[:title]
     # save it
     @recipe.save
 
