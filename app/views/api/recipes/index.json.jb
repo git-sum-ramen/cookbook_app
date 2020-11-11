@@ -4,7 +4,7 @@
     chef: recipe.chef,
     ingredients: recipe.ingredients_list,
     directions: recipe.directions,
-    prep_time: recipe.prep_time,
+    prep_time: recipe.friendly_prep_time,
     image_url: recipe.image_url
   }
 end
