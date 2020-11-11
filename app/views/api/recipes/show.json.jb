@@ -1,7 +1,7 @@
 {
   id: @recipe.id,
   title: @recipe.title,
-  ingredients: @recipe.ingredients,
+  ingredients: @recipe.ingredients_list,
   directions: @recipe.directions,
   prep_time: @recipe.image_url,
   image_url: @recipe.prep_time,
