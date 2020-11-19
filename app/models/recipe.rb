@@ -1,4 +1,6 @@
 class Recipe < ApplicationRecord
+  belongs_to :user
+  
   def ingredients_list
     # p "i am in the ingredietns list method"    
     ingredients.split(", ").map {|ingredient| ingredient.capitalize.tr('.', '')}

@@ -35,7 +35,7 @@ class Api::RecipesController < ApplicationController
       ingredients: params[:input_ingredients], 
       prep_time: params[:input_prep_time],
       image_url: params[:input_image_url],
-      chef: params[:input_chef]
+      user_id: current_user.id
     )
     @recipe.save
 

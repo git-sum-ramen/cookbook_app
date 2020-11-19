@@ -5,7 +5,6 @@
   directions: @recipe.directions,
   prep_time: @recipe.prep_time,
   image_url: @recipe.image_url,
-  chef: @recipe.chef,
   created_at: @recipe.created_at,
   formatted: {
     created_at: @recipe.friendly_created_at,
@@ -13,5 +12,5 @@
     ingredients: @recipe.ingredients_list,
     directions: @recipe.directions_list,
   },
-  current_user: current_user
+  user: @recipe.user
 }
