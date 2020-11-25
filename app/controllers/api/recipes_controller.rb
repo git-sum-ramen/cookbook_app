@@ -1,4 +1,7 @@
 class Api::RecipesController < ApplicationController
+  # before_action :authenticate_user, only: [:create, :update, :destroy]
+  # before_action :authenticate_user, except: [:index, :show]
+  
   def index
     # @recipes = Recipe.all
     p "current_user"
@@ -14,11 +17,8 @@ class Api::RecipesController < ApplicationController
 
     @recipes = @recipes.order(id: :desc)
 
-    if current_user
-      render 'index.json.jb'
-    else
-      render json: []
-    end
+    
+    render 'index.json.jb'    
   end
 
   def show
@@ -57,7 +57,7 @@ class Api::RecipesController < ApplicationController
 
     render 'show.json.jb'
   end
-
+  
   def destroy
     # finding the recipe
     @recipe = Recipe.find_by(id: params[:id])
