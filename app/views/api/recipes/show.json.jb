@@ -12,5 +12,6 @@
     ingredients: @recipe.ingredients_list,
     directions: @recipe.directions_list,
   },
-  user: @recipe.user
+  user: @recipe.user,
+  user_id: @recipe.user_id
 }
