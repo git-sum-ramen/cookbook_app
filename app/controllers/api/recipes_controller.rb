@@ -4,9 +4,9 @@ class Api::RecipesController < ApplicationController
   
   def index
     @recipes = Recipe.all
-    p "current_user"
-    p current_user
-    p "/current_user"
+    # p "current_user"
+    # p current_user
+    # p "/current_user"
     
     # search_term = params[:search]
     # if search_term
