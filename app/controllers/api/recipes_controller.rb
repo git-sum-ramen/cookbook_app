@@ -4,6 +4,11 @@ class Api::RecipesController < ApplicationController
   
   def index
     @recipes = Recipe.all
+
+    p "*" * 88
+    p @recipes
+    p "*" * 88
+    
     # p "current_user"
     # p current_user
     # p "/current_user"
